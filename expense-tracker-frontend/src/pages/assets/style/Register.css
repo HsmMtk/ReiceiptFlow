@@ -1,0 +1,120 @@
+/* Register.css */
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  padding: 0 20px; /* Marge horizontale globale */
+}
+
+.register-image {
+  margin-right: 40px; /* Marge à droite de l'image */
+}
+
+.register-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optionnel : pour arrondir les coins de l'image */
+}
+
+.register-box {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+.register-box h2 {
+  font-family: 'Pacifico', cursive; /* Applique la police Pacifico */
+  margin-bottom: 20px;
+  font-size: 36px; /* Ajuste la taille si nécessaire */
+  color: #333;
+}
+
+.register-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.terms {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.terms input {
+  margin-right: 10px;
+}
+
+.terms label {
+  font-size: 14px;
+  color: #666;
+}
+
+.create-account-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.login-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Styles pour la version mobile */
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column; /* Empile l'image et le formulaire */
+    padding: 20px;
+  }
+
+  .register-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .register-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .register-box h2 {
+    font-size: 24px;
+  }
+
+  .register-box input {
+    font-size: 14px;
+  }
+
+  .terms label {
+    font-size: 12px;
+  }
+
+  .create-account-button {
+    font-size: 14px;
+  }
+
+  .login-link {
+    font-size: 12px;
+  }
+}

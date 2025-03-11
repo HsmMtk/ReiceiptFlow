@@ -1,0 +1,127 @@
+/* Login.css */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  padding: 0 20px; /* Marge horizontale globale */
+}
+
+.login-image {
+  margin-right: 40px; /* Marge à droite de l'image */
+}
+
+.login-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optionnel : pour arrondir les coins de l'image */
+}
+
+.login-box {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+.login-box h2 {
+  font-family: 'Pacifico', cursive; /* Applique la police Pacifico */
+  margin-bottom: 20px;
+  font-size: 36px; /* Ajuste la taille si nécessaire */
+  color: #333;
+}
+
+.social-button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.google-button {
+  background-color: #db4437;
+  color: white;
+}
+
+.facebook-button {
+  background-color: #3b5998;
+  color: white;
+}
+
+.or-divider {
+  margin: 20px 0;
+  color: #666;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.signup-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.signup-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Styles pour la version mobile */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column; /* Empile l'image et le formulaire */
+    padding: 20px;
+  }
+
+  .login-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .login-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .login-box h2 {
+    font-size: 24px;
+  }
+
+  .social-button, .login-button {
+    font-size: 14px;
+  }
+
+  .login-box input {
+    font-size: 14px;
+  }
+
+  .signup-link {
+    font-size: 12px;
+  }
+}
