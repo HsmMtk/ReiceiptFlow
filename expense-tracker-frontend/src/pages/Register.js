@@ -3,6 +3,7 @@ import "./assets/style/Register.css";
 import inscriptionImage from "./assets/images/maquette_desktrop/img1_inscription.png"; // Importe l'image
 import "./assets/Fonts/fonts.css";
 import { Link } from "react-router-dom";
+import api from "../api"; // Importez l'instance Axios
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -10,10 +11,41 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [agreeTerms, setAgreeTerms] = useState(false);
+  const [error, setError] = useState(""); // Pour afficher les erreurs
+  const [successMessage, setSuccessMessage] = useState(""); // Pour afficher un message de succès
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Ici, tu vas appeler l'API d'inscription plus tard
+
+    // Vérifier que l'utilisateur a accepté les termes
+    if (!agreeTerms) {
+      setError("Vous devez accepter les termes et conditions.");
+      return;
+    }
+
+    try {
+      // Appeler l'API d'inscription
+      const response = await api.post("/register", {
+        name,
+        username,
+        email,
+        password,
+      });
+
+      // Si l'inscription réussit, afficher un message de succès
+      setSuccessMessage("Inscription réussie ! Redirection en cours...");
+      setError("");
+
+      // Rediriger l'utilisateur vers la page de connexion après 2 secondes
+      setTimeout(() => {
+        window.location.href = "/login"; // Remplacez par la route souhaitée
+      }, 2000);
+    } catch (error) {
+      // Gérer les erreurs d'inscription
+      setError(error.response?.data?.message || "Erreur lors de l'inscription");
+      setSuccessMessage("");
+      console.error("Erreur lors de l'inscription:", error.response?.data);
+    }
   };
 
   return (
@@ -23,7 +55,7 @@ const Register = () => {
       </div>
       <div className="register-box">
         <h2>
-           <span style={{fontSize:'35px'}}>Sign Up to{" "}</span>
+          <span style={{ fontSize: "35px" }}>Sign Up to{" "}</span>
           <span style={{ fontFamily: "Pacifico, cursive" }}>
             {" "}
             <span style={{ color: "green", fontSize: "37px" }}>Receipt</span>
@@ -62,7 +94,7 @@ const Register = () => {
           />
           <div className="terms">
             <input
-            required
+              required
               type="checkbox"
               id="agreeTerms"
               checked={agreeTerms}
@@ -73,6 +105,11 @@ const Register = () => {
               default Notification Settings
             </label>
           </div>
+
+          {/* Afficher les messages d'erreur et de succès */}
+          {error && <div className="error-message">{error}</div>}
+          {successMessage && <div className="success-message">{successMessage}</div>}
+
           <button type="submit" className="create-account-button">
             Create Account
           </button>
