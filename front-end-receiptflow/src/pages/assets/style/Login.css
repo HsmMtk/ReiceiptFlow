@@ -1,0 +1,216 @@
+/* Styles généraux pour le conteneur */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  padding: 0 20px; /* Marge horizontale globale */
+  animation: fadeIn 1s ease-in-out; /* Animation d'apparition */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Image de connexion */
+.login-image {
+  margin-right: 40px; /* Marge à droite de l'image */
+  animation: slideInLeft 1s ease-in-out; /* Animation pour l'image */
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.login-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optionnel : pour arrondir les coins de l'image */
+}
+
+/* Boîte de connexion */
+.login-box {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+  animation: slideInRight 1s ease-in-out; /* Animation pour la boîte */
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.login-box h2 {
+  font-family: 'Pacifico', cursive; /* Applique la police Pacifico */
+  margin-bottom: 20px;
+  font-size: 36px; /* Ajuste la taille si nécessaire */
+  color: #333;
+}
+
+/* Boutons sociaux */
+.social-button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.google-button {
+  background-color: #db4437; /* Rouge Google */
+  color: white;
+}
+
+.google-button:hover {
+  background-color: #c1351d; /* Rouge plus foncé au survol */
+}
+
+.facebook-button {
+  background-color: #3b5998; /* Bleu Facebook */
+  color: white;
+}
+
+.facebook-button:hover {
+  background-color: #2d4373; /* Bleu plus foncé au survol */
+}
+
+.or-divider {
+  margin: 20px 0;
+  color: #666;
+}
+
+/* Champs de formulaire */
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.login-box input:focus {
+  border-color: #27ae60; /* Bordure verte au focus */
+  outline: none;
+}
+
+/* Lien Forgot Password */
+.forgot-password {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.forgot-password a {
+  color: #27ae60; /* Vert */
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+  color: #219653; /* Vert plus foncé au survol */
+}
+
+/* Bouton de connexion */
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #27ae60; /* Vert */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #219653; /* Vert plus foncé au survol */
+}
+
+/* Lien Sign Up */
+.signup-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.signup-link a {
+  color: #27ae60; /* Vert */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+  color: #219653; /* Vert plus foncé au survol */
+}
+
+/* Messages d'erreur */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Styles pour la version mobile */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column; /* Empile l'image et le formulaire */
+    padding: 20px;
+  }
+
+  .login-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .login-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .login-box h2 {
+    font-size: 24px;
+  }
+
+  .social-button, .login-button {
+    font-size: 14px;
+  }
+
+  .login-box input {
+    font-size: 14px;
+  }
+
+  .signup-link {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,210 @@
+/* Styles généraux */
+.profile-page {
+  font-family: Arial, sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  animation: fadeIn 1s ease-in-out; /* Animation d'apparition */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Section Photo de Profil */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  margin-top: 20px;
+  animation: slideInTop 1s ease-in-out; /* Animation pour la section */
+}
+
+@keyframes slideInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-picture {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.profile-picture img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease; /* Effet de zoom au survol */
+}
+
+.profile-picture img:hover {
+  transform: scale(1.1); /* Zoom léger au survol */
+}
+
+.edit-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #2575fc;
+  color: white;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.edit-icon:hover {
+  background-color: #6a11cb;
+}
+
+/* Informations Utilisateur */
+.user-info {
+  text-align: center;
+}
+
+.user-info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #2575fc; /* Bleu pour le nom */
+}
+
+.user-info p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Boutons d'Actions */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.edit-profile-button,
+.change-password-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.edit-profile-button {
+  background-color: #2575fc;
+  color: white;
+}
+
+.edit-profile-button:hover {
+  background-color: #6a11cb;
+  transform: translateY(-5px); /* Effet de levée */
+}
+
+.change-password-button {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.change-password-button:hover {
+  background-color: #e9ecef;
+  transform: translateY(-5px); /* Effet de levée */
+}
+
+/* Sections modifiables */
+.edit-profile-section,
+.change-password-section {
+  padding: 20px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out; /* Animation pour les sections */
+}
+
+.edit-profile-section input,
+.change-password-section input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.edit-profile-section input:focus,
+.change-password-section input:focus {
+  border-color: #27ae60; /* Bordure verte au focus */
+  outline: none;
+}
+
+.edit-profile-section button,
+.change-password-section button {
+  background-color: #27ae60; /* Vert */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 90%;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-profile-section button:hover,
+.change-password-section button:hover {
+  background-color: #219653; /* Vert plus foncé au survol */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-section {
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  .user-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .user-info p {
+    font-size: 1rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .edit-profile-button,
+  .change-password-button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .edit-profile-section,
+  .change-password-section {
+    padding: 15px;
+  }
+}

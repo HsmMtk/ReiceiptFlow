@@ -1,0 +1,131 @@
+/* Styles généraux */
+.assistance-page {
+  font-family: Arial, sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Prend toute la hauteur de la page */
+}
+
+/* Section Hero */
+.assistance-hero {
+  background: linear-gradient(165deg, #2575fc, #6a11cb);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.assistance-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.assistance-hero p {
+  font-size: 1.2rem;
+}
+
+/* Section FAQ */
+.faq-section {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+}
+
+.faq-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Formulaire de Contact */
+.contact-form-section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.contact-form-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #2575fc;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #6a11cb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .assistance-hero h1 {
+    font-size: 2rem;
+  }
+
+  .assistance-hero p {
+    font-size: 1rem;
+  }
+
+  .faq-section h2,
+  .contact-form-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .faq-item h3 {
+    font-size: 1rem;
+  }
+
+  .faq-item p {
+    font-size: 0.9rem;
+  }
+}

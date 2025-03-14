@@ -1,0 +1,321 @@
+/* Styles généraux */
+.dashboard {
+  font-family: Arial, sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Assure que le contenu prend toute la hauteur de la page */
+}
+
+/* Section Hero */
+.hero-section {
+  background: linear-gradient(165deg, #2575fc, #6a11cb);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  flex: 1; /* Prend l'espace disponible */
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cta-buttons button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sign-in-button {
+  background-color: #fff;
+  color: #6a11cb;
+}
+
+.sign-up-button {
+  background-color: #2575fc;
+  color: #fff;
+}
+
+/* Section des Services */
+.services-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+  flex: 1; /* Prend l'espace disponible */
+}
+
+.services-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap; /* Permet aux cartes de passer à la ligne sur les petits écrans */
+}
+
+.service-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 28.44%; /* Largeur des cartes */
+  text-align: center;
+}
+
+.service-card img {
+  width: 100%; /* Ajustez la taille de l'image selon vos besoins */
+  max-width: 150px; /* Limitez la largeur maximale */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Section FAQ */
+.faq-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  flex: 1; /* Prend l'espace disponible */
+}
+
+.faq-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .service-cards {
+    flex-direction: column; /* Les cartes s'empilent verticalement sur les petits écrans */
+    align-items: center;
+  }
+
+  .service-card {
+    width: 80%; /* Les cartes prennent plus de largeur sur les petits écrans */
+    margin-bottom: 20px;
+  }
+
+  .faq-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .faq-item h3 {
+    font-size: 1rem;
+  }
+
+  .faq-item p {
+    font-size: 0.9rem;
+  }
+}
+/* Section Hero */
+.hero-section {
+  background: linear-gradient(165deg, #2575fc, #6a11cb);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  flex: 1; /* Prend l'espace disponible */
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.start-button {
+  width:240px;
+  height: 40px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fff; /* Fond blanc */
+  color: #6a11cb; /* Texte violet */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #6a11cb; /* Fond violet au survol */
+  color: #fff; /* Texte blanc au survol */
+}
+/* Styles pour le bouton de service */
+.service-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #2575fc; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.service-button:hover {
+  background-color: #6a11cb; /* Couleur de fond au survol */
+}
+/* Styles pour les cartes de service */
+.service-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 28.44%; /* Largeur des cartes */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espace entre les éléments */
+}
+
+/* Styles pour le bouton de service */
+.service-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #2575fc; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Aligne le bouton en bas */
+}
+
+.service-button:hover {
+  background-color: #6a11cb; /* Couleur de fond au survol */
+}
+/* Styles pour les cartes de service */
+.service-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 28.44%; /* Largeur des cartes */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espace entre les éléments */
+  align-items: center; /* Centre le contenu horizontalement */
+}
+
+/* Styles pour les images dans les cartes */
+.service-image {
+  width: 100%; /* Ajustez la taille de l'image selon vos besoins */
+  max-width: 150px; /* Limitez la largeur maximale */
+  height: auto;
+  margin-bottom: 15px;
+  display: block; /* Assure que l'image est centrée */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Styles pour le bouton de service */
+.service-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #2575fc; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Aligne le bouton en bas */
+}
+
+.service-button:hover {
+  background-color: #6a11cb; /* Couleur de fond au survol */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .service-cards {
+    flex-direction: column; /* Les cartes s'empilent verticalement sur les petits écrans */
+    align-items: center;
+  }
+
+  .service-card {
+    width: 90%; /* Augmentez la largeur des cartes pour les mobiles */
+    margin-bottom: 20px;
+  }
+
+  .faq-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .faq-item h3 {
+    font-size: 1rem;
+  }
+
+  .faq-item p {
+    font-size: 0.9rem;
+  }
+}

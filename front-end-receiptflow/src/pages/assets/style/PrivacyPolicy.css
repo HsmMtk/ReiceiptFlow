@@ -1,0 +1,137 @@
+/* Styles pour la page Privacy Policy */
+.privacy-policy-page {
+  font-family: Arial, sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  overflow-x: hidden; /* Empêche le scroll horizontal */
+  animation: fadeIn 1s ease-in-out; /* Animation d'apparition */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.privacy-policy-content {
+  width: 100%; /* Prend toute la largeur de l'écran */
+  max-width: 800px; /* Largeur maximale pour une meilleure lisibilité */
+  background-color: #fff;
+  padding: 40px;
+  margin: 40px auto; /* Centrer le contenu */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Bordures arrondies */
+  animation: slideIn 1s ease-in-out; /* Animation pour le contenu */
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.privacy-policy-content h1 {
+  color: #2575fc;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  animation: slideInLeft 1s ease-in-out; /* Animation pour le titre */
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.privacy-policy-content h2 {
+  color: #2575fc;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 2rem;
+  position: relative;
+}
+
+.privacy-policy-content h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #27ae60; /* Ligne verte sous les titres */
+}
+
+.privacy-policy-content p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.privacy-policy-content ul {
+  margin-bottom: 20px;
+  padding-left: 40px;
+}
+
+.privacy-policy-content ul li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.privacy-policy-content ul li::before {
+  content: "•";
+  color: #27ae60; /* Puces vertes */
+  font-size: 1.5rem;
+  position: absolute;
+  left: -20px;
+  top: -2px;
+}
+
+.privacy-policy-content a {
+  color: #2575fc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.privacy-policy-content a:hover {
+  color: #27ae60; /* Vert au survol */
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .privacy-policy-content {
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .privacy-policy-content h1 {
+    font-size: 2rem;
+  }
+
+  .privacy-policy-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .privacy-policy-content p,
+  .privacy-policy-content ul li {
+    font-size: 1rem;
+  }
+}

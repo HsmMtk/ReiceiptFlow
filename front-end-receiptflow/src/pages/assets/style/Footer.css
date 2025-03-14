@@ -1,0 +1,81 @@
+/* Styles généraux pour le footer */
+.footer {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 4px solid #27ae60; /* Bordure verte en haut */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Liens utiles */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #27ae60; /* Vert au survol */
+}
+
+/* Informations de contact */
+.footer-contact p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #ecf0f1;
+}
+
+/* Réseaux sociaux */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-icon {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #27ae60; /* Vert au survol */
+  transform: translateY(-5px); /* Effet de levée */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-links {
+    gap: 20px;
+  }
+
+  .footer-link {
+    font-size: 0.9rem;
+  }
+
+  .footer-social {
+    gap: 20px;
+  }
+
+  .social-icon {
+    font-size: 1.2rem;
+  }
+}
